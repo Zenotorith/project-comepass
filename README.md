@@ -4,9 +4,9 @@ Landing website page for Comepass English Academy
 
 ## ✍️ Author:
 
-- **[Veinz Duong Hoang Khoi](https://www.facebook.com/hk.vnct.24)**
+- **Veinz - Duong Hoang Khoi**
 
-- **[Fxbite Le Truong Thinh](https://www.facebook.com/fxbite)**
+- **Fxbite - Le Truong Thinh**
 
 ## 💻 Technologies used:
 
