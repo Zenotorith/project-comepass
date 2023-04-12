@@ -4,21 +4,21 @@ Landing website page for Comepass English Academy
 
 ## ✍️ Author:
 
-**[Veinz Duong Hoang Khoi](https://www.facebook.com/hk.vnct.24)**
+- **[Veinz Duong Hoang Khoi](https://www.facebook.com/hk.vnct.24)**
 
-**[Fxbite Le Truong Thinh](https://www.facebook.com/fxbite)**
+- **[Fxbite Le Truong Thinh](https://www.facebook.com/fxbite)**
 
 ## 💻 Technologies used:
 
-**[TypeScript](https://www.typescriptlang.org/)**
+- **[TypeScript](https://www.typescriptlang.org/)**
 
-**[NodeJs](https://nodejs.org/en)**
+- **[NodeJs](https://nodejs.org/en)**
 
-**[ExpressJs](https://expressjs.com/)**
+- **[ExpressJs](https://expressjs.com/)**
 
-**[ReactJs](https://vi.reactjs.org/)**
+- **[ReactJs](https://vi.reactjs.org/)**
 
-**[Tailwind CSS](https://tailwindcss.com/)**
+- **[Tailwind CSS](https://tailwindcss.com/)**
 
 ## 🚧 Requirements
 
