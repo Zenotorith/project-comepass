@@ -18,6 +18,10 @@ npm install
 
 ## 🧠 Run
 
-After installation finishes run `npm run dev` to start the web dev mode.
+After installation finishes run this command to start the web dev mode:
+
+```sh
+npm run dev
+```
 
 ⚠️ **Note: This is Comepass's copyright website.** ⚠️
