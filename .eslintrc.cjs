@@ -14,7 +14,8 @@ module.exports = {
     // Disable các rule mà eslint xung đột với prettier.
     // Để cái này ở dưới để nó override các rule phía trên!.
     'eslint-config-prettier',
-    'prettier'
+    'prettier',
+    'eslint-plugin-tailwindcss',
   ],
   plugins: ['prettier'],
   settings: {
