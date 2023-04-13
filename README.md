@@ -2,7 +2,7 @@
 
 Landing website page for Comepass English Academy
 
-## ✍️ Author:
+## ✍️ Authors:
 
 - **Veinz - Duong Hoang Khoi**
 
