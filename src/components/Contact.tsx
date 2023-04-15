@@ -1,5 +1,9 @@
+import FeedbackForm from "./FeedbackForm"
+
 const Contact = () => {
-  return <div>Contact</div>
+  return (
+    <FeedbackForm/>
+  )
 }
 
 export default Contact

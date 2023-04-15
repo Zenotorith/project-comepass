@@ -10,13 +10,13 @@ export default function App() {
   return (
     <>
       <Navbar />
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/courses' element={<Courses />} />
         <Route path='/solution' element={<Solution />} />
         <Route path='/about-us' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-      </Routes> */}
+      </Routes>
     </>
   )
 }
