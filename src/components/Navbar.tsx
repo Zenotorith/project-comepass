@@ -1,53 +1,52 @@
+import React, { useState } from 'react'
+import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
-import Logo from '../assets/logo.png'
-
-const Navbar = () => {
+const Nav = () => {
+  let Links = [
+    { name: 'Home', link: '/' },
+    { name: 'About', link: '/about-us' },
+    { name: 'Contact', link: '/contact' }
+  ]
+  let [open, setOpen] = useState(false)
   return (
-    <header className='bg-white'>
-      <nav className='flex justify-between items-center w-[92%]  mx-auto'>
-        <div>
-          <img
-            className='w-16 cursor-pointer'
-            src='https://cdn-icons-png.flaticon.com/512/5968/5968204.png'
-            alt='...'
-          />
+    <header className='shadow-md w-full fixed top-0 left-0 z-50'>
+      <nav className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+        <div
+          className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins]
+      text-gray-800'
+        >
+          <span className='w-28 mr-2'>
+            <Link to={'/'}>
+              <img src={logo} alt='logo' />
+            </Link>
+          </span>
         </div>
-        <div className='nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5'>
-          <ul className='flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8'>
-            <li>
-              <Link className='hover:text-gray-500' to='/'>
-                Home
+
+        <ul
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+            open ? 'top-20 ' : 'top-[-490px]'
+          }`}
+        >
+          {Links.map((link) => (
+            <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
+              <Link to={link.link} className='text-gray-800 font-medium hover:text-gray-400 duration-500'>
+                {link.name}
               </Link>
             </li>
-            <li>
-              <Link className='hover:text-gray-500' to='/solution'>
-                Solution
-              </Link>
-            </li>
-            <li>
-              <Link className='hover:text-gray-500' to='/courses'>
-                Courses
-              </Link>
-            </li>
-            <li>
-              <Link className='hover:text-gray-500' to='/about-us'>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link className='hover:text-gray-500' to='/contact'>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className='flex items-center gap-6'>
-          <button className='bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]'>Sign in</button>
-        </div>
+          ))}
+          <button
+            className='bg-[#2694d1] text-white font-[Poppins] font-bold py-2 md:px-6 rounded-full md:ml-8 px-[37%] md:mr-0 mr-8 hover:bg-[#1776ae]
+    duration-500'
+          >
+            Sign in
+          </button>
+        </ul>
+        <FaBars onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden' />
       </nav>
     </header>
   )
 }
 
-export default Navbar
+export default Nav

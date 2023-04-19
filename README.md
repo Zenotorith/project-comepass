@@ -2,13 +2,13 @@
 
 Landing website page for Comepass English Academy
 
-## ✍️ Author:
+## ✍️ Authors
 
 - **Veinz - Duong Hoang Khoi**
 
 - **Fxbite - Le Truong Thinh**
 
-## 💻 Technologies used:
+## 💻 Technologies used
 
 - **[TypeScript](https://www.typescriptlang.org/)**
 
@@ -36,7 +36,7 @@ npm install
 
 ## 🧠 Run
 
-After installation finishes run this command to start the web dev mode:
+After installation finished run this command to start the web dev mode:
 
 ```sh
 npm run dev
