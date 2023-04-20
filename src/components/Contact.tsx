@@ -1,6 +1,43 @@
+import React, { useState } from 'react'
+import axios from 'axios'
 import background from '../assets/bg.jpg'
 
+type Form = {
+  name: string
+  email: string
+  phone: string
+  description: string
+}
+
 const Contact = () => {
+  const [formData, setFormData] = useState<Form>({
+    name: '',
+    email: '',
+    phone: '',
+    description: ''
+  })
+
+  const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    try {
+      const response = await axios.post('https://request-form-comepass.vercel.app/api/form', formData, {
+        headers: {
+          'Content-Type': 'application/json',
+          'x-comepass-key': 'aGVsbG9jb21lcGFzczIwMjM='
+        }
+      })
+      console.log('Post submitted successfully!', response.data)
+      setFormData({ name: '', email: '', phone: '', description: '' }) // Clear the form
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const changeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+    console.log(formData)
+  }
+
   return (
     <section
       className='bg-no-repeat bg-center bg-cover h-screen flex items-center justify-center font-[Roboto] '
@@ -12,16 +49,48 @@ const Contact = () => {
             <h2 className='font-bold text-2xl text-[#2694d1]'>Liên hệ với chúng tôi</h2>
             <p className='text-xs mt-4 text-[#2694d1]'>Hãy cho chúng tôi biết bạn cần gì</p>
 
-            <form action='' className='flex flex-col gap-4'>
-              <input className='p-2 mt-8 rounded-xl border' type='text' name='name' placeholder='Họ tên...' />
-              <input className='p-2 rounded-xl border w-full' type='email' name='email' placeholder='Email...' />
-              <input className='p-2 rounded-xl border w-full' type='text' name='subject' placeholder='Tiêu đề...' />
-              <textarea
-                className='p-2 rounded-xl border w-full resize-none h-[200px]'
-                name='content'
-                placeholder='Nội dung...'
+            <form onSubmit={submitHandler} className='flex flex-col gap-4'>
+              <input
+                className='p-2 mt-8 rounded-xl border w-full outline-none'
+                type='text'
+                name='name'
+                id='name'
+                value={formData.name}
+                placeholder='Họ tên...'
+                onChange={changeHandler}
+                required
               />
-              <button className='bg-[#2694d1] rounded-xl text-white py-2 hover:scale-105 duration-300'>
+              <input
+                className='p-2 rounded-xl border w-full outline-none'
+                type='email'
+                name='email'
+                id='email'
+                value={formData.email}
+                placeholder='Email...'
+                onChange={changeHandler}
+                required
+              />
+              <input
+                className='p-2 rounded-xl border w-full outline-none'
+                type='tel'
+                name='phone'
+                id='phone'
+                value={formData.phone}
+                placeholder='Nhập số điện thoại...'
+                maxLength={10}
+                onChange={changeHandler}
+                required
+              />
+              <textarea
+                className='p-2 rounded-xl border w-full resize-none h-[200px] outline-none'
+                name='description'
+                id='description'
+                value={formData.description}
+                placeholder='Nội dung...'
+                onChange={changeHandler}
+                required
+              />
+              <button className='bg-[#2694d1] rounded-xl text-white py-2 hover:scale-105 duration-300' type='submit'>
                 Gửi liên hệ
               </button>
             </form>
