@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import background from '../assets/bg.jpg'
+import Form from '../types'
 
-type Form = {
-  name: string
-  email: string
-  phone: string
-  description: string
-}
+import background from '../assets/bg.jpg'
 
 const Contact = () => {
   const [formData, setFormData] = useState<Form>({

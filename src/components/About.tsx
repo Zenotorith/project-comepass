@@ -108,13 +108,13 @@ const About = () => {
                 onClick={() => setColapse1((prev) => !prev)}
                 className='text-[#2694d1] inline-flex items-center cursor-pointer'
               >
-                Learn More
+                {colapse1 ? 'Thu gọn' : 'Xem thêm'}
                 <svg
                   fill='none'
                   stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
                   className='w-4 h-4 ml-2'
                   viewBox='0 0 24 24'
                 >
@@ -182,13 +182,13 @@ const About = () => {
                 onClick={() => setColapse2((prev) => !prev)}
                 className='text-[#2694d1] inline-flex items-center cursor-pointer'
               >
-                Learn More
+                {colapse2 ? 'Thu gọn' : 'Xem thêm'}
                 <svg
                   fill='none'
                   stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
                   className='w-4 h-4 ml-2'
                   viewBox='0 0 24 24'
                 >
