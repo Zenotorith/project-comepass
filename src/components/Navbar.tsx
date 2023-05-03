@@ -5,9 +5,9 @@ import logo from '../assets/logo.png'
 
 const Nav = () => {
   let Links = [
-    { name: 'Home', link: '/' },
-    { name: 'About', link: '/about-us' },
-    { name: 'Contact', link: '/contact' }
+    { name: 'Trang Chủ', link: '/' },
+    { name: 'Về Chúng Tôi', link: '/about-us' },
+    { name: 'Liên Hệ', link: '/contact' }
   ]
   let [open, setOpen] = useState(false)
   return (
@@ -36,12 +36,6 @@ const Nav = () => {
               </Link>
             </li>
           ))}
-          <button
-            className='bg-[#2694d1] text-white font-[Poppins] font-bold py-2 md:px-6 rounded-full md:ml-8 px-[37%] md:mr-0 mr-8 hover:bg-[#1776ae]
-    duration-500'
-          >
-            Sign in
-          </button>
         </ul>
         <FaBars onClick={() => setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden' />
       </nav>

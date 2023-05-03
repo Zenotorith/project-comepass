@@ -3,10 +3,11 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import About from './components/About'
+import { Footer } from './components/Footer'
 
 export default function App() {
   return (
-    <div className='bg-[#e3e3e3]'>
+    <div>
       <Navbar />
       <main>
         <Routes>
@@ -15,6 +16,7 @@ export default function App() {
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   )
 }
