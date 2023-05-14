@@ -4,6 +4,21 @@ import avatar2 from '../assets/avatar-2.png'
 import cover from '../assets/cover.png'
 
 const About = () => {
+  const baseUrl = 'https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com'
+  const reviews = [
+    `${baseUrl}%2Fpermalink.php%3Fstory_fbid%3Dpfbid02bJC9Pnqs2BQyPcfvWVskoGvfpQHnYKyi9UP6B98vbqrRYK27a5A1HNuSnF9XqC5Wl%26id%3D100011661530518&show_text=true&width=500`,
+    `${baseUrl}%2Fminhtoan.ly.501151%2Fposts%2Fpfbid0Tb63fHrhhxVEsmyt8dJ9YDzxdU2N2it8p9TtBakYDEJA6CdEfmEXuDakMidtTm2Cl&show_text=true&width=500`,
+    `${baseUrl}%2Fpermalink.php%3Fstory_fbid%3Dpfbid05BpES9mxtz2Hfa8CvSMEfTyeNT3mZcTWZLsN5SAhMzZQpBqpczhQMinf7ViHXpfQl%26id%3D100020092545735&show_text=true&width=500`,
+    `${baseUrl}%2FmylavocuaLeo%2Fposts%2Fpfbid02DzGACCWQfPNARe91VCuThcNzCyJLUWnfQbF62ZfAq9kBPjcYoxEqTaQ558fQuxLol&show_text=true&width=500`,
+    `${baseUrl}%2FLucasKhoiTruong%2Fposts%2Fpfbid02VhjFeRtLzgJYeWXRCEriK6jEbyqP3B3k8osw6fcJP3Xu54uAtMfgCmho7t8b3cPMl&show_text=true&width=500`,
+    `${baseUrl}%2Fchitaerries%2Fposts%2Fpfbid0231trbFff42SLSgdKgcz2DCPmosQtnVJucNGzkk33BUdS9iCprbu6CcJr4aRNkWipl&show_text=true&width=500`,
+    `${baseUrl}%2Fpermalink.php%3Fstory_fbid%3Dpfbid0D1FmqdSDVGcsJS2ZH2J46Y4FMQWRWigBWjgzsr6YiRHc3e9aoN8WWD6Sk1SVz2ywl%26id%3D100053454345407&show_text=true&width=500`,
+    `${baseUrl}%2Ftuyen.pong.9%2Fposts%2Fpfbid0EeNrG9ov6adFELBKeAYxjwajHvDn5uiP48cqzpeL6zWKWwRU9rm76voAu6NtHdUUl&show_text=true&width=500`,
+    `${baseUrl}%2Fhoaitien0310%2Fposts%2Fpfbid03785f23qxPtQ6pfSXP8hK5RrKTcbMzed6mkU3WTx2jM4f63b31bd6d7sSGhPDuGmzl&show_text=true&width=500`,
+    `${baseUrl}%2Fpermalink.php%3Fstory_fbid%3Dpfbid0Jw3nudLjzVMwkXedrbCpb9Qkv8cvhwhhUsde4YPiw9AEkddBYxiscurC87WShaKVl%26id%3D100073003350324&show_text=true&width=500`,
+    `${baseUrl}%2Fpermalink.php%3Fstory_fbid%3Dpfbid02AyJpNm4ZFe33PWnU13pS1QgCVf6xsE12MMHjqiDGzCcfp4fSsLxu7ppTMHHBMSwdl%26id%3D100024372114153&show_text=true&width=500`,
+    `${baseUrl}%2Fpermalink.php%3Fstory_fbid%3Dpfbid032KhpFT2RyxShH9foUdwM1xywohp53TDzszfEf3xMHvpNA2S1PQb7VzWiPHL67bECl%26id%3D100006375244266&show_text=true&width=500`
+  ]
   const [colapse1, setColapse1] = useState(false)
   const [colapse2, setColapse2] = useState(false)
   return (
@@ -198,6 +213,21 @@ const About = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className='container px-5 pb-24 mx-auto flex flex-col text-center'>
+        <h1 className='text-4xl font-bold'>Nhận xét & Đánh giá</h1>
+        <ul className='mt-10 overflow-y-scroll h-[500px]'>
+          {reviews.map(value => (
+            <li className='m-4 flex justify-center '>
+              <iframe src={value}
+                width="500"
+                height="220"
+                data-size="A4"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">   
+              </iframe>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
