@@ -6,7 +6,6 @@ import logo from '../assets/logo.png'
 const Nav = () => {
   let Links = [
     { name: 'Trang Chủ', link: '/' },
-    { name: 'Khóa học', link: '/courses' },
     { name: 'Về Chúng Tôi', link: '/about-us' },
     { name: 'Liên Hệ', link: '/contact' }
   ]
